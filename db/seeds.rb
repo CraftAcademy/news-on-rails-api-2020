@@ -2,9 +2,9 @@ Article.destroy_all
 User.destroy_all
 
 journalist = User.create(email: 'journalist@mail.com', role: 'journalist', password: 'password')
-editor = User.create(email: 'editor@mail.com', role: 'editor', password: 'editor')
-registered = User.create(email: 'registered@mail.com', role: 'registered', password: 'editor')
-subscriber = User.create(email: 'subscriber@mail.com', role: 'subscriber', password: 'editor')
+editor = User.create(email: 'editor@mail.com', role: 'editor', password: 'password')
+registered = User.create(email: 'registered@mail.com', role: 'registered', password: 'password')
+subscriber = User.create(email: 'subscriber@mail.com', role: 'subscriber', password: 'password')
 
 premium_article = Article.create(
   title: 'U cant imagine what this monkey did in the grocery store',
