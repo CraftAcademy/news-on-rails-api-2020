@@ -5,11 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version.....
 
 * System dependencies
 
-* Configuration
+* Configuration....
 
 * Database creation
 
@@ -21,5 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ........
+* ..........
 
