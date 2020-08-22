@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_08_19_183214) do
     t.text "content"
     t.integer "category"
     t.bigint "journalist_id"
-    t.boolean "published", default: false
+    t.boolean "published"
     t.string "location"
     t.index ["journalist_id"], name: "index_articles_on_journalist_id"
   end
