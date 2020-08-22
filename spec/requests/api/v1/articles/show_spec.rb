@@ -1,5 +1,11 @@
 RSpec.describe "GET /v1/articles", type: :request do
-  let!(:article) { create(:article, title: 'The first article', lead: 'This is the first article lead', content: 'This is the first article content', category: "sports") }
+  let!(:article) { FactoryBot.create(
+    :article, 
+    title: 'The first article', 
+    lead: 'This is the first article lead', 
+    content: 'This is the first article content', 
+    category: "sports"
+  ) }
 
   describe 'successfully gets article' do
     before do
@@ -31,5 +37,5 @@ RSpec.describe "GET /v1/articles", type: :request do
     it 'responds with error message' do
       expect(response_json["message"]).to eq 'Unfortunatly the article you were looking for could not be found.'
     end
-    end
+  end
 end

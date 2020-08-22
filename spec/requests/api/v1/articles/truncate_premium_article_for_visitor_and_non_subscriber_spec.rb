@@ -51,4 +51,4 @@ RSpec.describe "GET /v1/articles for premuim", type: :request do
       expect(response_json["article"]["content"].length).to eq 50
     end
   end
-end 
+end
