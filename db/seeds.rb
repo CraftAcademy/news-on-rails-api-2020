@@ -71,6 +71,71 @@ culture_free_unpublished_article_1 = Article.create(
 file = URI.open('https://bokor.com.au/persistent/catalogue_images/products/culture_kings_bokor_5.jpg')
 culture_free_unpublished_article_1.image.attach(io: file, filename: 'king.jpg')
 
+international_premium_article_1 = Article.create(
+  title: 'Global warming',
+  lead: 'Rainforests are shrinking',
+  content: 'Cras ultricies ligula sed magna dictum porta.' * 10,
+  category: 'international',
+  published: true,
+  premium: true,
+  location: 'Brazil',
+  journalist_id: journalist.id
+)
+file = URI.open('https://www.conserve-energy-future.com/wp-content/uploads/2014/03/Tropical_Rainforest.jpg')
+international_premium_article_1.image.attach(io: file, filename: 'rainforests.jpg')
+
+international_premium_article_2 = Article.create(
+  title: 'International universities',
+  lead: 'Remote studies are on the increase',
+  content: 'Nulla porttitor accumsan tincidunt.' * 10,
+  category: 'international',
+  published: true,
+  premium: true,
+  location: 'USA',
+  journalist_id: journalist.id
+)
+file = URI.open('https://ww2.kqed.org/app/uploads/sites/43/2020/03/Distance-learning-800x450.jpg')
+international_premium_article_2.image.attach(io: file, filename: 'university.jpg')
+
+international_free_article_1 = Article.create(
+  title: 'Flag change',
+  lead: 'Sri Lanka wants to change its flag',
+  content: 'Proin eget tortor risus. Nulla porttitor accumsan tincidunt.' * 10,
+  category: 'international',
+  published: true,
+  premium: false,
+  location: 'Sri Lanka',
+  journalist_id: journalist.id
+)
+file = URI.open('https://www.rnz.co.nz/assets/news/46539/eight_col_compo.jpg?1441060535')
+international_free_article_1.image.attach(io: file, filename: 'flag.jpg')
+
+international_free_article_2 = Article.create(
+  title: 'Drinking water',
+  lead: 'Water is drying up',
+  content: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.' * 10,
+  category: 'international',
+  published: true,
+  premium: false,
+  location: 'Sweden',
+  journalist_id: journalist.id
+)
+file = URI.open('https://www.eliteworldhotels.com.tr/blog-en/ImageHandler.ashx?path=~/Resources/CKEditor/Blog/FtDescription/2017-05-03@17-26-36-857_vucudunudaki-toksinlerin-kolayca-atilmasini-saglar.jpg')
+international_free_article_2.image.attach(io: file, filename: 'water.jpg')
+
+international_free_unpublished_article_1 = Article.create(
+  title: 'The pandemic',
+  lead: 'The impact of Corona virus on countries',
+  content: 'Nulla quis lorem ut libero malesuada feugiat.' * 10,
+  category: 'international',
+  published: false,
+  premium: false,
+  location: 'Sweden',
+  journalist_id: journalist.id
+)
+file = URI.open('https://www.festo.com/group/en/repo/assets/319718852-corona-1532x900-adobestock.jpg')
+international_free_unpublished_article_1.image.attach(io: file, filename: 'covid.jpg')
+
 economy_premium_article_1 = Article.create(
   title: 'Budget result',
   lead: 'Power to the people',
