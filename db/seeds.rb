@@ -214,18 +214,57 @@ lifestyle_premium_article_1 = Article.create(
 file = URI.open('https://i.ytimg.com/vi/M3zRXaGEQEA/hqdefault.jpg')
 lifestyle_premium_article_1.image.attach(io: file, filename: 'monkey.jpg')
 
-free_article = Article.create(
-  title: 'World is burning',
-  lead: 'as usual',
-  content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' * 10,
-  category: 'international',
+lifestyle_premium_article_2 = Article.create(
+  title: 'Imperfections',
+  lead: 'New concept to hit the market',
+  content: 'Donec rutrum congue leo eget malesuada. Quisque velit nisi, ' * 10,
+  category: 'lifestyle',
   published: true,
-  premium: false,
-  location: 'USA',
+  premium: true,
+  location: 'Sweden',
   journalist_id: journalist.id
 )
-file = URI.open('https://networkingnerd.files.wordpress.com/2016/09/dumpsterfire2.jpg?w=584&h=584')
-free_article.image.attach(io: file, filename: 'fire.jpg')
+file = URI.open('https://impakter.com/wp-content/uploads/2018/09/lifestyle.jpg')
+lifestyle_premium_article_2.image.attach(io: file, filename: 'imperfections.jpg')
+
+lifestyle_free_article_1 = Article.create(
+  title: 'Gyms Gyms Gyms',
+  lead: 'Break a sweat',
+  content: 'Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.' * 10,
+  category: 'lifestyle',
+  published: true,
+  premium: false,
+  location: 'Norway',
+  journalist_id: journalist.id
+)
+file = URI.open('https://blogs.studyinsweden.se/wp-content/uploads/2014/12/EmptyName-10.jpg')
+lifestyle_free_article_1.image.attach(io: file, filename: 'gym.jpg')
+
+lifestyle_free_article_2 = Article.create(
+  title: 'Wash new clothes',
+  lead: 'Avoid the bed bugs',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' * 10,
+  category: 'lifestyle',
+  published: true,
+  premium: false,
+  location: 'Sweden',
+  journalist_id: journalist.id
+)
+file = URI.open('https://blog.vancity.com/wp-content/uploads/2019/08/ClothingRack-iStock-Blog-1000x484.jpg')
+lifestyle_free_article_2.image.attach(io: file, filename: 'clothes.jpg')
+
+lifestyle_free_unpublished_article_1 = Article.create(
+  title: 'Avoid stress',
+  lead: 'Live a happy life',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.' * 10,
+  category: 'lifestyle',
+  published: false,
+  premium: false,
+  location: 'Norway',
+  journalist_id: journalist.id
+)
+file = URI.open('https://media.dods.co.uk/sites/media.dods.co.uk/files/image/3003%20stress.jpg')
+lifestyle_free_unpublished_article_1.image.attach(io: file, filename: 'stress.jpg')
 
 unpublished_article = Article.create(
   title: 'Bad and unpublished',
